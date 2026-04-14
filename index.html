@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CYBER-ARCADE: PRO EDITION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="status-bar" style="position: sticky; top: 0; background: #050505; z-index: 1000;">
+        <span>AGENT: <b id="userName">GUEST</b></span> | 
+        <span>SCORE: <b id="scoreDisplay">0</b></span> |
+        <span>TOP SCORE: <b id="topScore">0</b></span>
+    </div>
+
+    <div id="arcade-container">
+        <h1 class="glow-text">NEON ARCADE</h1>
+        <div id="menu">
+            <!-- Icons added directly to button labels -->
+            <button onclick="nav('ttt')">⭕ TIC-TAC-TOE</button>
+            <button onclick="nav('cards')">🃏 MEMORY MATCH</button>
+            <button onclick="nav('meteor')">🚀 METEOR BLASTER</button>
+            <button onclick="nav('blade')">⚔️ BLADE MASTER</button>
+        </div>
+        
+        <!-- The Root Container for all dynamic HTML -->
+        <div id="game-stage">
+            <h2 class="glow-text">SYSTEM READY... SELECT A PROTOCOL</h2>
+        </div>
+    </div>
+
+    <!-- Placement at the bottom ensures the DOM is fully constructed [1, 3] -->
+    <script src="arcade.js"></script>
+</body>
